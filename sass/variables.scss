@@ -1,0 +1,78 @@
+// Colors
+// UI Colours
+$color-default: #222222;
+$color-dark : #111;
+$color-light : #bebebe;
+$color-darker-light :#979797;
+// Semantic Colours
+$color-error: #FF3617;
+$color-white: #ffffff;
+// Layout Colours
+$color-primary : #0030B5;
+$color-secondary: #FF3617;
+
+
+$success : #3CC13B;
+$color-success : #3CC13B;
+
+//Theme Colours
+$bright-red : #FF3617;
+$gold : #FFB517;
+$dark-blue : #0030B5;
+$teal : #00D1C7;
+$slate : #262628;
+
+
+// Proxima Nova Semibold
+// font-family: proxima-nova, sans-serif;
+// font-weight: 600;
+// font-style: normal;
+
+// Proxima Nova Regular
+// font-family: proxima-nova, sans-serif;
+// font-weight: 400;
+// font-style: normal;
+
+// Proxima Nova Light
+// font-family: proxima-nova, sans-serif;
+// font-weight: 300;
+// font-style: normal;
+
+// Fonts
+$font-body : proxima-nova, 'sans-serif',
+sans-serif;
+$font-heading: 'forma-djr-display',
+sans-serif;
+$font-icon : 'Font Awesome 5 Pro';
+// Animations
+$transition : all .24s ease-in-out;
+$transition-fast: all .12s ease-in-out;
+$transition-slow: all .48s ease-in-out;
+// Variable Classes
+$classes: (primary : $color-primary,
+	secondary: $color-secondary,
+	dark : $color-dark,
+	light : $color-light,
+	error : $color-error,
+	default : $color-default,
+	white : $color-white,
+	bright-red : $bright-red,
+	gold : $gold,
+	dark-blue : $dark-blue,
+	);
+
+@each $class-color,
+$class in $classes {
+	.bg--#{$class-color} {
+		background-color: $class;
+	}
+
+	.color--#{$class-color} {
+		color: $class;
+	}
+
+	.border--#{$class-color} {
+		border-color: $class;
+	}
+}
+

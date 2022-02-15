@@ -1,0 +1,75 @@
+// Video
+	.mejs-container {
+		width: 100% !important;
+		height: auto !important;
+		padding-top: 56.25%;
+	}
+	.mejs-overlay,
+	.mejs-poster {
+		width: 100% !important;
+		height: 100% !important;
+	}
+	.mejs-mediaelement video {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100% !important;
+		height: 100% !important;
+	}
+	.popup .wp-video {
+		width: 100% !important;
+	}
+	.mejs-controls .mejs-time-rail .mejs-time-current {
+		background: $color-primary;
+	}
+// Images
+	.alignright,
+	a .alignright {
+		float: right;
+		margin: 0 0 $space-s $space-s;
+	}
+	.alignleft,
+	a .alignleft {
+		float: left;
+		margin: 0 $space-s $space-s 0;
+	}
+	.aligncenter,
+	a .aligncenter {
+		display: block;
+		margin: 0 auto $space-s auto;
+	}
+	.alignnone,
+	a .alignnone {
+		display: block;
+		margin-bottom: $space-s;
+	}
+	@include phone {
+		img.alignleft,
+		img.alignright {
+			max-width: 50%;
+			height: auto;
+		}
+	}
+// Caption
+	.wp-caption {
+		margin-bottom: $space-s;
+	}
+	.wp-caption img {
+		border: none;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		height: auto;
+	}
+	.wp-caption p.wp-caption-text {
+		margin-bottom: 0;
+		padding: $space-xs 0;
+		border-bottom: 1px solid $color-light;
+	}
+
+	.mlr-auto {
+		margin-left: auto;
+		margin-right: auto;
+	}

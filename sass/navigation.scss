@@ -1,0 +1,374 @@
+// Nav Primary
+.nav--primary {
+  font-size: 16px;
+  line-height: 1em;
+  text-transform: uppercase;
+
+  > li + li {
+    margin-left: 1em;
+  }
+
+  a {
+    position: relative;
+    color: $color-default;
+  }
+
+  li:hover > a {
+    color: $color-secondary;
+  }
+
+  // Current Item
+  > .current-menu-item > a,
+  > .current-menu-ancestor > a {
+    color: $color-primary;
+  }
+
+  /* DROPDOWN */
+  .sub-menu {
+    display: none;
+    position: absolute;
+    left: 18px;
+    top: 100%;
+    background-color: $color-primary;
+    width: 225px;
+    padding: 8px 18px;
+    z-index: 9999;
+
+    li {
+      float: none;
+    }
+
+    a {
+      font-size: 17px;
+      line-height: 20px;
+      padding: 10px 0;
+      font-weight: 400;
+      color: #fff;
+    }
+
+    li:hover .sub-menu {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+// Hamburger
+.hamburger {
+  position: absolute;
+  z-index: 800;
+  top: 50%;
+  right: 18px;
+  transform: translateY(-50%);
+  width: 38px;
+  cursor: pointer;
+
+  img {
+    height: 28px;
+  }
+
+  &__line {
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: $color-primary;
+    height: 6px;
+    transition: $transition;
+  }
+
+  &__line--top {
+    top: 3px;
+  }
+
+  &__line--middle {
+    top: 50%;
+    left: 50%;
+    margin-top: -3px;
+    width: 100%;
+    transform: translateX(-50%);
+  }
+
+  &__line--bottom {
+    bottom: 3px;
+  }
+}
+
+.hamburger.is-active {
+  .hamburger__line--top {
+    top: 50%;
+    margin-top: -3px;
+    transform: rotate(45deg);
+  }
+
+  .hamburger__line--middle {
+    width: 0;
+  }
+
+  .hamburger__line--bottom {
+    bottom: 50%;
+    margin-bottom: -3px;
+    transform: rotate(-45deg);
+  }
+}
+
+@include min-width(1200px) {
+  .hamburger {
+    display: none;
+  }
+}
+
+// Offscreen
+.offscreen {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  max-width: 100%;
+  z-index: 880;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  transition: $transition-slow;
+  width: 100%;
+  visibility: hidden;
+  transform: translateX(100%);
+  background-color: $color-primary;
+  color: $color-white;
+
+  .nav--mobile {
+    li {
+      margin-bottom: $space-xl + rem;
+
+      @include phone {
+        margin-bottom: $space-phone-xl + rem;
+      }
+    }
+    a {
+      @extend .h6;
+      @extend .semi;
+      color: $color-white;
+      text-transform: uppercase;
+    }
+  }
+
+  .menuSocial {
+    text-align: center;
+    a {
+      color: $color-white;
+      font-size: 20px;
+      margin-right: 24px;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .cartButton {
+    color: $dark-blue;
+    background-color: $color-white;
+
+    .cartCount {
+      background-color: $dark-blue;
+      color: $color-white;
+    }
+
+    &:hover {
+      background-color: $bright-red;
+      color: $color-white;
+
+      .cartCount {
+        color: $bright-red;
+        background-color: $color-white;
+      }
+    }
+  }
+
+  .hamburger__line {
+    background-color: #ffffff;
+  }
+
+  &--active {
+    transform: translateX(0);
+    visibility: visible;
+  }
+
+  &__content {
+    padding: 40px 0;
+  }
+
+  .mobileMenuHeader {
+    position: relative;
+    padding-top: 33px;
+    padding-bottom: 33px;
+    margin-bottom: 54px;
+
+    @include phone {
+      margin-bottom: 18px;
+    }
+
+    .offscreen__logo {
+      text-align: center;
+
+      img {
+        width: 250px;
+
+        @include phone {
+          width: 150px;
+        }
+      }
+    }
+  }
+}
+
+.header--menu {
+  width: 100%;
+  padding-top: 44px;
+  padding-bottom: 87px;
+
+  @include md {
+    padding-top: 33px;
+    padding-bottom: 33px;
+  }
+
+  &.mainMenu {
+    display: grid;
+    grid-template-columns: repeat(2, 16%) 34% repeat(2, 17%);
+
+    @include md {
+      grid-template-columns: repeat(2, 0%) 100% repeat(2, 0%);
+    }
+
+    grid-template-rows: 1fr;
+    grid-auto-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+
+    div {
+      &:nth-child(1),
+      &:nth-child(2) {
+        justify-self: flex-start;
+
+        @include md {
+          a {
+            display: none;
+          }
+        }
+      }
+
+      &:nth-child(3) {
+        a {
+          text-align: center;
+          display: inline-block;
+          width: 328px;
+          height: 138px;
+
+          @include md {
+            width: 250px;
+            height: 107px;
+          }
+
+          @include phone {
+            width: 150px;
+            height: 63px;
+            background-size: contain;
+          }
+        }
+      }
+
+      &:nth-child(4),
+      &:nth-child(5) {
+        justify-self: flex-end;
+
+        @include md {
+          a {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .current-menu-item {
+      a {
+        &::before {
+          width: 100%;
+        }
+      }
+    }
+
+    a {
+      position: relative;
+
+      color: $slate;
+      text-transform: uppercase;
+      font-size: 1.11rem;
+      line-height: 1.22rem;
+
+      &:before {
+        content: "";
+        position: absolute;
+        background-image: url(./images/waveyLine.svg);
+        background-repeat: repeat-x;
+        width: 0%;
+        height: 13.8px;
+        bottom: -24px;
+        transition: all 0.6s linear;
+      }
+
+      &:hover {
+        &:before {
+          width: 100%;
+        }
+      }
+
+      &.pageColor-red {
+        &:before {
+          filter: invert(26%) sepia(81%) saturate(2818%) hue-rotate(352deg)
+            brightness(102%) contrast(101%);
+        }
+      }
+
+      &.pageColor-green {
+        &:before {
+          filter: invert(54%) sepia(97%) saturate(1320%) hue-rotate(134deg)
+            brightness(100%) contrast(101%);
+        }
+      }
+
+      &.pageColor-blue {
+        &:before {
+          filter: invert(12%) sepia(97%) saturate(3335%) hue-rotate(222deg)
+            brightness(97%) contrast(114%);
+        }
+      }
+
+      &.pageColor-yellow {
+        &:before {
+          filter: invert(68%) sepia(75%) saturate(970%) hue-rotate(346deg)
+            brightness(106%) contrast(101%);
+        }
+      }
+    }
+  }
+}
+
+.menu--home {
+  background: transparent url(./images/ccLogo.svg) no-repeat center;
+  height: 138px;
+  background-size: 328px 138px;
+  text-indent: -9999px;
+
+  @include md {
+    background-size: 250px 107px;
+  }
+}
+
+// Pagination
+
+.nav--pagination {
+  display: flex;
+  justify-content: center;
+
+  li + li {
+    margin-left: 1em;
+  }
+}

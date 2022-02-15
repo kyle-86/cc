@@ -1,0 +1,197 @@
+// ORDERING
+
+$orders: 10;
+
+@for $i from 1 through $orders {
+  .order-#{$i} {
+    order: #{$i};
+  }
+}
+
+@include md {
+  @for $i from 1 through $orders {
+    .order-md-#{$i} {
+      order: #{$i};
+    }
+  }
+}
+
+@include tablet {
+  @for $i from 1 through $orders {
+    .order-tablet-#{$i} {
+      order: #{$i};
+    }
+  }
+}
+
+@include phone {
+  @for $i from 1 through $orders {
+    .order-phone-#{$i} {
+      order: #{$i};
+    }
+  }
+}
+
+.h100 {
+  height: 100%;
+}
+
+.d-none {
+  display: none;
+}
+
+$space-none: 0;
+$space-xs: 0.67;
+$space-s: 1.33;
+$space-m: 2.67;
+$space-l: 4;
+$space-xl: 5.33;
+$space-xxl: 6.67;
+$space-xxxl: 13.34;
+$space-xxxl: 13.34;
+$space-xxxxl: 17.78;
+
+$space-phone-xs: 0.38;
+$space-phone-s: 0.75;
+$space-phone-m: 1.5;
+$space-phone-l: 2.25;
+$space-phone-xl: 3;
+$space-phone-xxl: 3.75;
+$space-phone-xxxl: 7.5;
+$space-phone-xxxxl: 11.25;
+
+$sizeUnit: rem;
+$heightKey: "h";
+$marginKey: "m";
+$paddingKey: "p";
+$separator: "-";
+$separatorPhone: "phone-";
+
+$sizes: (
+  ("none", $space-none),
+  ("xs", $space-xs),
+  ("s", $space-s),
+  ("m", $space-m),
+  ("l", $space-l),
+  ("xl", $space-xl),
+  ("xxl", $space-xxl),
+  ("xxxl", $space-xxxl),
+  ("xxxxl", $space-xxxxl)
+);
+
+$sizes-phone: (
+  ("none", 0),
+  ("xs", 0.38),
+  ("s", 0.75),
+  ("m", 1.5),
+  ("l", 2.25),
+  ("xl", 3),
+  ("xxl", 3.75),
+  ("xxxl", 7.5),
+  ("xxxxl", 11.25)
+);
+
+$positions: (("t", "top"), ("r", "right"), ("b", "bottom"), ("l", "left"));
+
+@function sizeValue($key, $value) {
+  @return if($key== "none", 0, $value + $sizeUnit);
+}
+
+@each $size in $sizes {
+  $sizeKey: nth($size, 1);
+  $sizeValue: nth($size, 2);
+}
+
+@each $size in $sizes {
+  $sizeKey: nth($size, 1);
+  $sizeValue: nth($size, 2);
+
+  .#{$heightKey}#{$separator}#{$sizeKey} {
+    height: sizeValue($sizeKey, $sizeValue);
+  }
+
+  .#{$marginKey}#{$separator}#{$sizeKey} {
+    margin: sizeValue($sizeKey, $sizeValue);
+  }
+
+  .#{$paddingKey}#{$separator}#{$sizeKey} {
+    padding: sizeValue($sizeKey, $sizeValue);
+  }
+
+  @each $position in $positions {
+    $posKey: nth($position, 1);
+    $posValue: nth($position, 2);
+
+    .#{$marginKey}#{$separator}#{$posKey}#{$separator}#{$sizeKey} {
+      margin-#{$posValue}: sizeValue($sizeKey, $sizeValue);
+    }
+
+    .#{$paddingKey}#{$separator}#{$posKey}#{$separator}#{$sizeKey} {
+      padding-#{$posValue}: sizeValue($sizeKey, $sizeValue);
+    }
+  }
+}
+
+@include phone {
+  @each $size in $sizes-phone {
+    $sizeKey: nth($size, 1);
+    $sizeValue: nth($size, 2);
+
+    .#{$heightKey}#{$separator}#{$sizeKey} {
+      height: sizeValue($sizeKey, $sizeValue);
+    }
+
+    .#{$marginKey}#{$separator}#{$sizeKey} {
+      margin: sizeValue($sizeKey, $sizeValue);
+    }
+
+    .#{$paddingKey}#{$separator}#{$sizeKey} {
+      padding: sizeValue($sizeKey, $sizeValue);
+    }
+
+    @each $position in $positions {
+      $posKey: nth($position, 1);
+      $posValue: nth($position, 2);
+
+      .#{$marginKey}#{$separator}#{$posKey}#{$separator}#{$sizeKey} {
+        margin-#{$posValue}: sizeValue($sizeKey, $sizeValue);
+      }
+
+      .#{$paddingKey}#{$separator}#{$posKey}#{$separator}#{$sizeKey} {
+        padding-#{$posValue}: sizeValue($sizeKey, $sizeValue);
+      }
+    }
+  }
+}
+
+@include phone {
+  @each $size in $sizes-phone {
+    $sizeKey: nth($size, 1);
+    $sizeValue: nth($size, 2);
+
+    .#{$separatorPhone}#{$heightKey}#{$separator}#{$sizeKey} {
+      height: sizeValue($sizeKey, $sizeValue);
+    }
+
+    .#{$separatorPhone}#{$marginKey}#{$separator}#{$sizeKey} {
+      margin: sizeValue($sizeKey, $sizeValue);
+    }
+
+    .#{$separatorPhone}#{$paddingKey}#{$separator}#{$sizeKey} {
+      padding: sizeValue($sizeKey, $sizeValue);
+    }
+
+    @each $position in $positions {
+      $posKey: nth($position, 1);
+      $posValue: nth($position, 2);
+
+      .#{$separatorPhone}#{$marginKey}#{$separator}#{$posKey}#{$separator}#{$sizeKey} {
+        margin-#{$posValue}: sizeValue($sizeKey, $sizeValue);
+      }
+
+      .#{$separatorPhone}#{$paddingKey}#{$separator}#{$posKey}#{$separator}#{$sizeKey} {
+        padding-#{$posValue}: sizeValue($sizeKey, $sizeValue);
+      }
+    }
+  }
+}

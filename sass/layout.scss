@@ -1,0 +1,1137 @@
+.layout,
+main {
+  overflow: hidden;
+}
+
+// Accordion
+.layout--blockquote {
+  overflow: hidden;
+}
+
+.accordion__item {
+  margin-bottom: 1em;
+}
+
+.accordion__item__heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  padding: 1em 2em;
+  color: $color-white;
+  background-color: $color-primary;
+  margin-bottom: 0;
+}
+
+.accordion__item__content {
+  padding: 1em 2em;
+  border: solid $color-primary;
+  border-width: 0 1px 1px 1px;
+}
+
+.hero--home {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+
+  @include phone {
+    height: 628px;
+  }
+
+  .heroBackgroundText {
+    position: absolute;
+    z-index: 2;
+    text-align: center;
+    width: 100%;
+    mix-blend-mode: difference;
+  }
+
+  .heroShape {
+    position: absolute;
+    background-size: cover;
+    z-index: 1;
+
+    &.shape1 {
+      background-image: url(./images/Vector-1.svg);
+      width: 647px;
+      height: 430px;
+      top: 0;
+      left: 0;
+
+      @include md {
+        top: -100px;
+        left: -160px;
+        transform: scale(0.7);
+      }
+
+      @include tablet {
+        top: -100px;
+        left: -200px;
+        transform: scale(0.5);
+      }
+    }
+
+    &.shape2 {
+      background-image: url(./images/Vector-2.svg);
+      width: 665px;
+      height: 396px;
+      top: 0;
+      right: 0;
+
+      @include md {
+        top: -100px;
+        right: -160px;
+        transform: scale(0.7);
+      }
+
+      @include tablet {
+        top: -110px;
+        right: -180px;
+        transform: scale(0.5);
+      }
+    }
+
+    &.shape3 {
+      background-image: url(./images/Vector-3.svg);
+      width: 722px;
+      height: 349px;
+      bottom: 0;
+      left: 0;
+
+      @include md {
+        bottom: -100px;
+        left: -160px;
+        transform: scale(0.7);
+      }
+
+      @include tablet {
+        bottom: -110px;
+        left: -190px;
+        transform: scale(0.5);
+      }
+    }
+
+    &.shape4 {
+      background-image: url(./images/Vector-4.svg);
+      width: 1009px;
+      height: 490px;
+      bottom: 0;
+      right: 0;
+
+      @include md {
+        bottom: -100px;
+        right: -160px;
+        transform: scale(0.7);
+      }
+
+      @include tablet {
+        bottom: -130px;
+        right: -500px;
+        transform: scale(0.5);
+      }
+    }
+  }
+
+  .heroImage {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+  }
+
+  .heroImgPhone {
+    @media only screen and (max-width: 402px) {
+      bottom: 0;
+      position: absolute;
+      width: 100%;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.heroBackgroundText {
+  .copiedTextArea {
+    div {
+      visibility: visible;
+      opacity: 0;
+    }
+  }
+
+  .copyText {
+    margin-top: 1.8%;
+    padding: 0px 30px;
+
+    svg {
+      width: 100%;
+      height: auto;
+      max-width: 1577.61px;
+    }
+  }
+
+  .copyText,
+  h1 {
+    // font-size: 110px;
+    // line-height: normal;
+    // letter-spacing: 31px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    font-family: $font-heading;
+    transition: all 0.6s linear;
+
+    span {
+      &:nth-of-type(1) {
+        color: #75fef6;
+      }
+
+      &:nth-of-type(2) {
+        color: #7bfec0;
+      }
+
+      &:nth-of-type(3) {
+        color: #0667fe;
+      }
+
+      &:nth-of-type(4) {
+        color: #5ffe90;
+      }
+
+      &:nth-of-type(5) {
+        color: #ff0a23;
+      }
+
+      &:nth-of-type(6) {
+        color: #ff82ca;
+      }
+
+      &:nth-of-type(7) {
+        color: #6affd8;
+      }
+
+      &:nth-of-type(9) {
+        color: #49fe81;
+      }
+
+      &:nth-of-type(10) {
+        color: #7cfec1;
+      }
+
+      &:nth-of-type(11) {
+        color: #60fed1;
+      }
+
+      &:nth-of-type(12) {
+        color: #fee47f;
+      }
+
+      &:nth-of-type(13) {
+        color: #ff19ee;
+      }
+
+      &:nth-of-type(14) {
+        color: #a7b4ff;
+      }
+
+      &:nth-of-type(15) {
+        color: #7ffec9;
+      }
+    }
+  }
+}
+
+.page-id-47 {
+  .innerHero {
+    margin-bottom: 0;
+  }
+}
+
+.innerHero {
+  padding-bottom: 145px;
+  overflow: hidden;
+
+  @include md {
+    padding-bottom: 97px;
+  }
+
+  .custom-grid {
+    overflow: visible;
+  }
+
+  .heroBackgroundTextInner {
+    z-index: 2;
+    text-align: center;
+    mix-blend-mode: difference;
+    position: absolute;
+    top: 58%;
+    right: -28px;
+    height: 30px;
+    overflow: hidden;
+    animation: fullHeight 7s forwards;
+
+    @include phone {
+      bottom: -148px;
+      right: -26px;
+    }
+
+    .copyText {
+      margin-top: 6px;
+      font-size: 18px;
+      letter-spacing: 3px;
+
+      @include md {
+        margin-top: 4px;
+      }
+
+      @include phone {
+        margin-top: 3px;
+      }
+
+      svg {
+        width: 400px;
+        height: auto;
+
+        @include md {
+          width: 300px;
+        }
+
+        @include phone {
+          width: 275px;
+        }
+      }
+    }
+  }
+
+  &.theme-green {
+    background: $teal;
+    background: linear-gradient(180deg, $teal 53%, rgba(255, 255, 255, 0) 53%);
+  }
+
+  &.theme-red {
+    background: $bright-red;
+    background: linear-gradient(180deg,
+        $bright-red 53%,
+        rgba(255, 255, 255, 0) 53%);
+
+    h1 {
+      color: $color-white;
+    }
+  }
+
+  &.theme-blue {
+    background: $dark-blue;
+    background: linear-gradient(180deg,
+        $dark-blue 53%,
+        rgba(255, 255, 255, 0) 53%);
+
+    h1 {
+      color: $color-white;
+    }
+  }
+
+  &.theme-yellow {
+    background: $gold;
+    background: linear-gradient(180deg, $gold 53%, rgba(255, 255, 255, 0) 53%);
+  }
+
+  .hero-textImage {
+    margin-top: 167px;
+
+    .heroText {
+      margin-bottom: 85px;
+
+      @media only screen and (max-width: 1000px) {
+        margin-bottom: 0;
+      }
+
+      h1 {
+        @media only screen and (max-width: 1000px) {
+          margin-bottom: 2.25rem;
+        }
+
+        @media only screen and (min-width: 1385px) and (max-width: 1520px) {
+          font-size: 2.3rem;
+        }
+      }
+    }
+
+    @media only screen and (max-width: 1400px) {
+      margin-top: 80px;
+    }
+
+    @include md {
+      margin-top: 50px;
+    }
+
+    @media only screen and (max-width: 800px) {
+      margin-top: 36px;
+    }
+  }
+
+  .floatPosition {
+    position: absolute;
+    left: -20px;
+    bottom: 67px;
+
+    @media only screen and (max-width: 1400px) {
+      bottom: 20px;
+    }
+
+    @include md {
+      bottom: 50px;
+    }
+
+    @media only screen and (max-width: 1000px) {
+      display: none;
+    }
+  }
+
+  .heroRightImage {
+    margin-top: 27px;
+    position: relative;
+
+    @media only screen and (max-width: 1000px) {
+      margin-top: 0;
+    }
+  }
+
+  .grid-1000-12 {
+    @media only screen and (max-width: 1000px) {
+      flex: 0 0 100%;
+      max-width: 100%;
+      padding: 0;
+    }
+  }
+
+  .shape {
+    position: absolute;
+
+    &:hover {
+      //animation: shake 0.6s infinite;
+      //animation-timing-function: ease;
+    }
+
+    &.topLeft {
+      top: 180px;
+      left: -45px;
+
+      @include tablet {
+        top: -60px;
+        right: -101px;
+        left: auto;
+
+        img {
+          width: 70%;
+        }
+      }
+    }
+
+    &.topRight {
+      top: 42px;
+      right: -120px;
+
+      @include tablet {
+        top: -61px;
+        left: -65px;
+        right: auto;
+
+        img {
+          width: 70%;
+        }
+      }
+    }
+
+    &.bottomLeft {
+      bottom: -44px;
+      left: 29px;
+
+      @include tablet {
+        bottom: 0;
+        left: -61px;
+
+        img {
+          width: 70%;
+        }
+      }
+    }
+
+    &.bottomRight {
+      left: 4px;
+      bottom: -97px;
+
+      @include tablet {
+        left: auto;
+        right: -70px;
+        bottom: -57px;
+
+        img {
+          width: 70%;
+        }
+      }
+    }
+  }
+}
+
+.background-grey {
+  background: linear-gradient(180deg,
+      rgba(196, 196, 196, 0.4) 0%,
+      rgba(196, 196, 196, 0) 70%);
+}
+
+.woocommerce-cart,
+.woocommerce-checkout,
+.privacy-policy,
+.page-id-203 {
+  background: #ffffff;
+}
+
+// Products
+.product-grid {
+  .productFrame {
+    margin: 0 4.5px 1px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+    padding: 0 32px;
+    background: $color-white;
+
+    @include phone {
+      padding: 0 24px;
+    }
+
+    .productImage {
+      margin: 48px 0 30px;
+      overflow: hidden;
+
+      &:hover {
+        img {
+          transform: scale(1.5);
+        }
+      }
+
+      img {
+        transition: transform 1s ease;
+      }
+
+      @include phone {
+        margin: 24px 0 30px;
+      }
+    }
+
+    .productDetails {
+      padding: 0 26px 50px;
+      margin-bottom: 9px;
+
+      @include phone {
+        padding: 0 26px 11px;
+      }
+
+      .productTitle {
+        margin-bottom: 6px;
+      }
+
+      .productPrice {
+        .hasSale {
+          text-decoration: line-through;
+          color: $teal;
+        }
+      }
+
+      .productButton {
+        margin-top: 30px;
+
+        a {
+          color: $bright-red;
+          text-transform: uppercase;
+          text-decoration: underline;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.splitContent {
+  .splitContentImage {
+    margin-top: 60px;
+
+    @include tablet {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 0;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .splitContentText {
+    margin-bottom: 60px;
+
+    @include tablet {
+      margin-bottom: 0;
+    }
+
+    .contentTextArea {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      flex-direction: column;
+      height: 100%;
+      color: $color-white;
+
+      &.imageright {
+        align-items: flex-end;
+      }
+
+      .content__left {
+        max-width: 457px;
+        margin-left: 144px;
+
+        @include tablet {
+          max-width: 100%;
+        }
+
+        @include md {
+          margin-left: 0;
+        }
+      }
+
+      .content__right {
+        max-width: 457px;
+        margin-right: 144px;
+
+        @include tablet {
+          max-width: 100%;
+        }
+
+        @include md {
+          margin-right: 0;
+        }
+      }
+
+      @include md {
+        margin-left: 40px;
+        padding-right: 40px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+      }
+
+      @include phone {
+        padding-top: $space-phone-l + rem;
+        padding-bottom: $space-phone-l + rem;
+        margin-left: $space-phone-m + rem;
+        padding-right: $space-phone-m + rem;
+      }
+
+      h2 {
+        color: $color-white;
+        position: relative;
+
+        &.visible-line {
+          &:after {
+            width: 100px;
+          }
+        }
+
+        &:after {
+          content: "";
+          background-image: url(./images/squigle.svg);
+          width: 0px;
+          transition: 1s all ease;
+          height: 14px;
+          position: absolute;
+          bottom: -30px;
+          left: 0;
+        }
+      }
+
+      a {
+        color: $color-white;
+        text-transform: uppercase;
+        text-decoration: underline;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.blockquoteSection {
+  padding-bottom: 219px;
+  padding-top: 240px;
+  position: relative;
+
+  @include md {
+    padding-bottom: 99px;
+    padding-top: 120px;
+  }
+}
+
+// Shop
+.productPagination {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 0;
+
+  .facetwp-facet {
+    margin-bottom: 0;
+  }
+
+  .facetwp-pager {
+    a {
+      color: $slate;
+      font-weight: 700;
+
+      &.active,
+      &:hover {
+        color: $bright-red;
+        text-decoration: underline;
+      }
+    }
+
+    .facetwp-page {
+      padding: 0px;
+      margin-right: 18px;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.woocommerce-product-gallery {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+
+  img {
+    height: auto;
+  }
+}
+
+.type-product {
+  .entry-summary {
+    h1 {
+      margin-bottom: 24px;
+      margin-top: 28px;
+    }
+
+    .price {
+      del {
+        margin-right: 10px;
+        text-decoration: line-through;
+        color: $teal;
+      }
+    }
+  }
+}
+
+.swatch-wrapper {
+  margin: 0 18px 18px 0;
+  padding: 0;
+}
+
+.attribute_pa_color_picker_label {
+  display: inline-block;
+  margin-left: 6px;
+  margin-bottom: 0;
+}
+
+#picker_pa_color {
+  .swatch-wrapper {
+    border: 0;
+
+    a {
+      width: 46px !important;
+      height: 46px !important;
+      transition: none;
+    }
+
+    &.selected {
+      border: 3px solid $slate;
+      padding: 0px;
+
+      a {
+        width: 40px !important;
+        height: 40px !important;
+      }
+    }
+  }
+}
+
+div.swatch-label {
+  margin-bottom: 0px;
+}
+
+.productDetails {
+  .productDetailsTitle {
+    margin-top: 13px;
+    margin-bottom: 13px;
+    font-weight: 600;
+  }
+}
+
+.productThumbs {
+  margin: 0 -2.5px;
+
+  .woocommerce-product-gallery__image {
+    margin: 5px 2.5px 0;
+    display: inline-block;
+  }
+}
+
+.woocommerce-notices-wrapper {
+  text-align: right;
+}
+
+.wooNotice {
+  padding-left: 24px;
+  width: 100%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  display: inline-block;
+
+  border-radius: 8px;
+  color: #ffffff;
+  text-align: left;
+
+  &.error-message {
+    background-color: $color-error;
+  }
+
+  &.success-message {
+    background-color: $success;
+  }
+
+  a {
+    display: none;
+  }
+
+  i {
+    margin-right: 24px;
+    color: $color-white;
+  }
+}
+
+.relatedProducts {
+  background: linear-gradient(180deg,
+      rgba(196, 196, 196, 0.4) 0%,
+      rgba(196, 196, 196, 0) 70%);
+
+  .featuredProducts {
+    padding-top: 0;
+    padding-bottom: 0;
+    position: relative;
+  }
+}
+
+.featuredProducts {
+  position: relative;
+}
+
+.shapesAnimation {
+  @include phone {
+    display: none;
+  }
+
+  .shape {
+    position: absolute;
+
+    &:nth-of-type(1) {
+      top: 160px;
+      left: 87px;
+    }
+
+    &:nth-of-type(2) {
+      bottom: 300px;
+      right: -39px;
+    }
+
+    &:nth-of-type(3) {
+      bottom: 173px;
+      left: 0;
+    }
+
+    &:nth-of-type(4) {
+      bottom: 120px;
+      left: 44%;
+
+      @include md {
+        left: 30%;
+      }
+
+    }
+
+    &:nth-of-type(5) {
+      bottom: 248px;
+      left: 22%;
+
+      @include md {
+        left: 12%;
+      }
+    }
+
+    &:nth-of-type(6) {
+      top: 45%;
+      right: 95px;
+    }
+
+    &:nth-of-type(7) {
+      top: 44%;
+      left: 8px;
+    }
+
+    &:nth-of-type(8) {
+      top: 270px;
+      right: 206px;
+    }
+
+    &:nth-of-type(9) {
+      bottom: 174px;
+      left: calc(50% + 251px);
+    }
+
+    &:nth-of-type(10) {
+      bottom: 199px;
+      left: 220px;
+
+      @include md {
+        top: 269px;
+        right: 50px;
+        left: auto;
+        bottom: auto;
+      }
+
+    }
+
+    &:nth-of-type(11) {
+      bottom: 125px;
+      right: 268px;
+    }
+
+    &:nth-of-type(12) {
+      top: 60%;
+      right: 208px;
+    }
+
+    &:nth-of-type(13) {
+      top: 186px;
+      right: 0%;
+    }
+
+    &:nth-of-type(14) {
+      top: 52%;
+      left: 238px;
+    }
+
+    &:nth-of-type(15) {
+      top: 53.5%;
+      left: 238px;
+    }
+
+    img {
+      @include phone {
+        max-width: 60px;
+      }
+    }
+  }
+}
+
+.swatch-control {
+  display: flex;
+}
+
+.variations {
+  .swatch-control {
+    display: block;
+  }
+
+  #picker_video-type {
+    .variationsChoice {
+      position: relative;
+      margin-bottom: 39px;
+
+      .variationName {
+        font-weight: 700;
+        text-transform: uppercase;
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        pointer-events: none;
+
+        label {
+          margin-left: 0;
+        }
+      }
+
+      .variationPrice,
+      .variationDesc {
+        position: absolute;
+        pointer-events: none;
+      }
+
+      .variationPrice {
+        top: 26px;
+        right: 15px;
+        @extend .h6;
+        @extend .semi;
+        margin-bottom: 0;
+      }
+
+      .variationDesc {
+        bottom: 21px;
+        left: 12px;
+      }
+
+      input {
+        height: 80px;
+        margin: 0;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.video_product {
+
+  .product_title,
+  .h6.price {
+    display: none;
+  }
+
+  .woocommerce-variation-add-to-cart {
+    text-align: center;
+    margin-top: 45px;
+  }
+
+  .gform_variation_wrapper {
+    margin-top: 47px;
+
+    #gform_fields_1 {
+      display: grid;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      gap: 0px 40px;
+      height: 100%;
+
+      @include tablet {
+        display: block;
+      }
+
+      label {
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+
+      textarea {
+        height: 303px;
+      }
+
+      >div {
+        &:nth-of-type(1) {
+          grid-row-start: 1;
+          grid-column-start: 1;
+
+          grid-row-end: 2;
+          grid-column-end: 2;
+        }
+
+        &:nth-of-type(2) {
+          grid-row-start: 2;
+          grid-column-start: 1;
+
+          grid-row-end: 3;
+          grid-column-end: 2;
+        }
+
+        &:nth-of-type(3) {
+          grid-row-start: 3;
+          grid-column-start: 1;
+
+          grid-row-end: 4;
+          grid-column-end: 2;
+        }
+
+        &:nth-of-type(4) {
+          grid-row-start: 1;
+          grid-column-start: 2;
+
+          grid-row-end: 4;
+          grid-column-end: 3;
+        }
+      }
+    }
+  }
+}
+
+.thwmsc-layout-time-line.thwmsc_title_below ul.thwmsc-tabs li {
+  width: 33.333333333333%;
+}
+
+#thwmsc-tabs li:before {
+  content: "";
+}
+
+#thwmsc-tabs li {
+  padding-left: 0;
+}
+
+.thwmsc-tab-panel {
+  background-color: #ffffff;
+}
+
+.wooTable {
+  .woocommerce-cart-form {
+    background-color: #ffffff;
+    z-index: 3;
+    position: relative;
+  }
+
+  .heroBackgroundText {
+    z-index: 0;
+    text-align: center;
+    mix-blend-mode: difference;
+    position: absolute;
+    top: 50%;
+    left: -80px;
+
+    @include phone {
+      bottom: -148px;
+      right: -26px;
+    }
+
+    .copyText {
+      margin-top: 6px;
+      font-size: 18px;
+      letter-spacing: 3px;
+
+      @include md {
+        margin-top: 4px;
+      }
+
+      @include phone {
+        margin-top: 3px;
+      }
+
+      svg {
+        width: 400px;
+        height: auto;
+
+        @include md {
+          width: 300px;
+        }
+
+        @include phone {
+          width: 275px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.bg--primary{background-color:#0030b5}
+.color--primary{color:#0030b5}
+.border--primary{border-color:#0030b5}
+.bg--secondary{background-color:#ff3617}
+.color--secondary{color:#ff3617}
+.border--secondary{border-color:#ff3617}
+.bg--dark{background-color:#111}
+.color--dark{color:#111}
+.border--dark{border-color:#111}
+.bg--light{background-color:#bebebe}
+.color--light{color:#bebebe}
+.border--light{border-color:#bebebe}
+.bg--error{background-color:#ff3617}
+.color--error{color:#ff3617}
+.border--error{border-color:#ff3617}
+.bg--default{background-color:#222}
+.color--default{color:#222}
+.border--default{border-color:#222}
+.bg--white{background-color:#fff}
+.color--white{color:#fff}
+.border--white{border-color:#fff}
+.bg--bright-red{background-color:#ff3617}
+.color--bright-red{color:#ff3617}
+.border--bright-red{border-color:#ff3617}
+.bg--gold{background-color:#ffb517}
+.color--gold{color:#ffb517}
+.border--gold{border-color:#ffb517}
+.bg--dark-blue{background-color:#0030b5}
+.color--dark-blue{color:#0030b5}
+.border--dark-blue{border-color:#0030b5}
+.login{color:#222}
+.login h1 a{background-image:url(../../images/admin/logo.png) !important;background-size:124px !important;background-position:center top;background-repeat:no-repeat;margin:0 auto 24px;padding:0;width:124px;height:124px;text-indent:-9999px;outline:0;display:block}
+.login label{color:#222}
+.login input[type=checkbox]{box-shadow:none;border-color:#0030b5}
+.login input[type=checkbox]:checked:before{color:#0030b5}
+.login .button-primary{background:#0030b5;border:0;box-shadow:none;color:#fff;text-decoration:none;text-shadow:none;-webkit-transition:all .24s ease-in-out;transition:all .24s ease-in-out}
+.login .button-primary:active,.login .button-primary:hover{background-color:#ff3617;border:0;box-shadow:none;text-shadow:none}
+.login #backtoblog a,.login #nav a{color:#0030b5}
+.login #backtoblog a:hover,.login #nav a:hover{color:#ff3617}
+.login #login_error,.login .message{color:#222;border-left-color:#0030b5}
